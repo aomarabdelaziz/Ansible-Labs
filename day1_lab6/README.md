@@ -4,3 +4,6 @@
 # Copy index.html from controller to host 1
 # Restart nginx service
 # Can you see your index.html file when you hit host 1 on port 80 ?
+![alt text](day1_lab6-1.png)
+![alt text](day1_lab6-2.png)
+
