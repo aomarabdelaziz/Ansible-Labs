@@ -2,3 +2,4 @@
 # Example: ansible all -m command -a "whoami"
 # What is the output of the command ?
 # AD-HOC COMMAND ESCALATION USING ROOT USER
+![alt text](day1_lab4.png)
