@@ -1,0 +1,19 @@
+- name: Variables Play
+  hosts: web
+  gather_facts: true
+  become: yes
+  tasks:
+    - name: insall Nginx
+      apt:
+        name: nginx
+        state: latest
+      register: install_output
+    - name: debug
+      debug:
+        var: install_output
+    - name: restart nginx depends on output
+      service:
+        name:  nginx
+        state: restarted
+      when: install_output.changed == true or install_output.failed == false
+    

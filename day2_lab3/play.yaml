@@ -1,0 +1,14 @@
+- name: Variables Play
+  hosts: web
+  become: yes
+  vars:
+    packages:
+      - git
+      - unzip
+      - apache2
+  tasks:
+    - name: install a list of packages
+      apt:
+        name: "{{ item }}"
+        state: latest
+      loop: "{{ packages }}"   
