@@ -1,0 +1,17 @@
+- name: Modules
+  remote_user: ubuntu
+  hosts: web
+  gather_facts: yes
+  become: true
+  tasks:
+    - name: Update Cache
+      apt:
+        update_cache: yes
+    - name: Installing Nginx
+      apt:
+        name: nginx
+        state: latest
+    - name: Restart Nginx
+      service:
+        name: nginx
+        state: restarted

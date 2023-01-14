@@ -1,0 +1,10 @@
+- name: Play 1
+  remote_user: ubuntu
+  hosts: web
+  gather_facts: no
+  become: true
+  tasks:
+    - name: update Cache
+      apt:
+        update_cache: no
+

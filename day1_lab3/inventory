@@ -1,0 +1,1 @@
+ping_web ansible_host=44.211.147.229 ansible_connection=ssh ansible_user=ubuntu ansible_ssh_private_key_file=/home/ubuntu/Ansible/private.pem
